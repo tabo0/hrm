@@ -1,0 +1,12 @@
+.tr1{
+    text-align: center;
+}
+
+.table tbody tr td span{
+    color: red;
+}
+.div2{
+    width:500px;
+    margin: 0 auto;
+    background-size: revert;
+}

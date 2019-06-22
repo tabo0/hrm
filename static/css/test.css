@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* CSS Document */
+.title{
+	text-align:center;
+	width:95%;
+}
+.panel-default{
+	text-align:left;
+	margin: 5px;
+	background-color:#bebebe;
+	height:50px;
+}
+.panel-heading{
+	text-align:left
+}
+.panel-body{
+	text-align:left
+}
+.modern-menu{
+	height:50px;
+	font-size:24px;
+	padding-top:7px;
+}
+.heng{
+	float:left;
+	display:block;
+	display:inline;
+	width:60px;
+}
+.nickname{
+	position:absolute;
+	right:5%;
+	font-size:17px;
+}
+.table{
+	width:100%;
+	text-align:center;
+	font-size:25px;
+}
+.accepted{
+	background-color:#6F3;
+	color:#FFF;
+	font-size:20px;
+}
+.wa{
+	background-color:#F00;
+	color:#FFF;
+	font-size:20px;
+}
+.judging{
+	background-color:#666;
+	color:#FFF;
+	font-size:20px;
+}
+.register{
+	width:100px;
+	height:50px;
+	text-align:center;
+	font-size:25px;
+	color:#FFF;
+	background-color:#0F3;
+}

@@ -1,0 +1,47 @@
+body *{
+    margin: 0;
+    padding: 0;
+}
+body div.tree {
+    float:left;
+    position: relative;
+    top:20px;
+    left: 20px;
+    width:180px;
+}
+.infor
+{
+    float:left;
+    position: absolute;
+    top:20px;
+    left: 20px;
+}
+.tree_menu ul {
+    width:100px;
+}
+.tree_menu li {
+    list-style-type: none;
+    vertical-align: middle;
+    position: relative;
+}
+.tree_menu li img {
+    float: left;
+}
+.tree_menu li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-family: arial;
+    font-size: 1.0em;
+    padding-left: 2px;
+    text-decoration: none;
+}
+.tree_menu li ul {
+    position: relative;
+    left: 20px;
+}
+.table {
+    position: absolute;
+    top:40px;
+    left: 160px;
+}

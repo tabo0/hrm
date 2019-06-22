@@ -1,0 +1,28 @@
+.newcenter{
+    text-align: center;
+    margin-top: 10px;
+}
+.daohang{
+    background: white;
+}
+.mar{
+    margin: 20px;
+}
+.nickname{
+    position:absolute;
+    right:5%;
+    font-size:17px;
+}
+.problemul{
+    list-style: none;
+    float: left;
+}
+.dpre{
+    margin: 0px;
+    background: white;
+    border:none;
+    font-size: 18px;
+ }
+.gonggao{
+    background: url("gonggao.jpg");
+}

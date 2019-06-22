@@ -1,0 +1,216 @@
+/*CSS样式要嵌入在页面head元素中的<style>标签里*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*默认较好*/
+body {
+    font-family: "myriad-pro", helvetica, sans-serif;
+    background: #efefef;
+    margin: 0 0;
+}
+
+#wrapper {
+    width: 1280px;
+    margin: 0 auto 20px;
+}
+
+header {
+    position: relative;
+    /* 为页面标题提供定位上下文 */
+    height: 70px;
+    /* 固定高度，保卫绝对定位元素 */
+    margin: 10px 0;
+    /* vertical space around header */
+    border-radius: 20px 0px 20px 0px;
+    /* order: tl, tr, br, bl */
+    box-shadow: 0 12px 8px -9px #555;
+    /* negative spread brings shadow inside box width */
+    background: #fff;
+    padding-top: 1px;
+    /* prevents menu's top margin collapsing */
+    z-index: 20;
+    /* ensures menus overlay all content in feature area */
+}
+
+header section#title {
+    position: absolute;
+    width: 300px;
+    /* wide enough to not force text wrap */
+    height: 65px;
+    /* tall enough  for both lines of text */
+    left: 0px;
+    /* top left corner positioning */
+    top: 0px;
+    /* border:1px solid red; */
+    /* temp for screenshots */
+}
+
+/* underline fix for Safari */
+header h1 {
+    padding: 9px 12px 0;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 1;
+    letter-spacing: -.075em;
+    color: #4eb8ea;
+    /* border:1px solid #AAA; */
+    /* temp for screenshots */
+}
+
+header h2 {
+    font-family: "runda", helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: .75em;
+    color: #333;
+    padding: 0px 12px;
+    line-height: 1.5;
+    /* border:1px solid #AAA; */
+    /* temp for screenshots */
+}
+
+/*添加视觉样式*/
+.multi_drop_menu {
+    margin: 19px auto;
+    padding: 0;
+    text-align: center;
+    font-size: .8em;
+    font: 1em helvetica, arial, sans-serif;
+}
+
+.multi_drop_menu>ul {
+    display: inline-block;
+}
+
+.multi_drop_menu a {
+    /*链接标签样式*/
+    /*让链接充满列表项*/
+    display: block;
+    /*block意为作为块级元素*/
+    color: #555;
+    /*文本颜色*/
+    background-color: #eee;
+    /*背景颜色*/
+    padding: .2em 1em;
+    /*链接的内边距*/
+    border-width: 3px;
+    /*分隔线宽度*/
+    border-color: transparent;
+    /*可以有颜色,也可以透明*/
+}
+
+.multi_drop_menu a:hover {
+    color: #fff;
+    /*悬停时文本颜色*/
+    background-color: #aaa;
+    /*悬停时背景色*/
+}
+
+.multi_drop_menu a:active {
+    color: #ccc;
+    /*点击时文本变色*/
+    background-color: #fff;
+    /*点击时背景变色*/
+}
+
+/*添加功能样式*/
+.multi_drop_menu * {
+    margin: 0;
+    padding: 0;
+}
+
+/*强制ul包围li*/
+
+
+.multi_drop_menu li {
+
+    float: left;
+    /*水平排列菜单项*/
+
+    list-style-type: none;
+    /*去掉默认的项目符合*/
+
+    position: relative;
+    /*为子菜单提供定位上下文(相对定位)*/
+}
+
+.multi_drop_menu li a {
+    display: block;
+    /*让链接充满列表项*/
+    padding: .25em .8em;
+    font-family: "Source Sans Pro", helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-align: left;
+    color: #fff;
+    text-decoration: none;
+    /* removes link underlining */
+    -webkit-font-smoothing:antialiased;
+    border-right-style: solid;
+    /*给每个链接添加一个右边框*/
+    background-clip: padding-box;
+    /*背景只出现在内边距区域后面*/
+    text-decoration: none;
+    /*去掉链接的下划线*/
+    background:#4eb8ea;
+}
+nav.multi_drop_menu li:last-child a  {
+	border-bottom-right-radius:10px;
+	}
+nav.multi_drop_menu li:first-child a  {border-top-left-radius:10px;}
+.multi_drop_menu li:last-child a {
+    border-right-style: none;
+}
+nav.multi_drop_menu li li:first-child a {
+	border-radius:0;
+	}
+nav.multi_drop_menu li li:last-child a {
+	border-bottom-left-radius:10px;
+	}
+
+/*临时隐藏低级菜单*/
+/*.multi_drop_menu li ul {
+   /* display: none;*/
+/*}*/
+
+/*添加视觉样式*/
+/*二级菜单宽度*/
+.multi_drop_menu li ul {
+    width: 9.2em;
+}
+.multi_drop_menu li li a {
+    /*去掉继承的右边框*/
+    border-right-style: none;
+    /*添加上边框*/
+    border-top-style: solid;
+}
+
+/*添加的功能样式*/
+.multi_drop_menu li ul {
+    /*隐藏二级菜单*/
+    /*display: none;*/
+    opacity:0; visibility:hidden;
+    /*相对于父菜单项定位*/
+    position: absolute;
+    /*左边与父菜单项对齐*/
+    left: 0;
+    /*顶边与父菜单项底边对齐*/
+    top: 100%;
+    -webkit-transition: 1s all; /* sets up transition of opacity and visibility*/
+	-moz-transition: 1s all;
+	transition: 1s all;
+}
+
+.multi_drop_menu li:hover>ul {
+    /*父元素悬停时显示*/
+    /*display: block;*/
+    opacity:1; /* both properties are transitioned */
+	visibility:visible;
+}
+.multi_drop_menu li li {
+    float: none;
+}
